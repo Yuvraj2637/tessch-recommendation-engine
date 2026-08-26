@@ -1,0 +1,49 @@
+{
+  "n_products": 300,
+  "n_users": 80,
+  "n_sessions": 328,
+  "n_events": 11285,
+  "n_orders": 27,
+  "revenue": 93358.0,
+  "event_mix": {
+    "product_impression": 7291,
+    "product_view": 1286,
+    "product_click": 1035,
+    "product_hover": 778,
+    "page_view": 270,
+    "home_view": 254,
+    "search": 137,
+    "wishlist_add": 114,
+    "add_to_cart": 66,
+    "purchase": 27,
+    "remove_from_cart": 19,
+    "product_share": 7,
+    "wishlist_remove": 1
+  },
+  "funnel": {
+    "product_impression": 7291,
+    "product_click": 1035,
+    "product_view": 1286,
+    "wishlist_add": 114,
+    "add_to_cart": 66,
+    "purchase": 27
+  },
+  "ctr_by_position": {
+    "1": 0.27630375114364136,
+    "2": 0.1987060998151571,
+    "3": 0.13636363636363635,
+    "4": 0.12164750957854406,
+    "5": 0.10361681329423265,
+    "6": 0.08390918065153011,
+    "7": 0.060542797494780795,
+    "8": 0.05010438413361169
+  },
+  "user_activity_gini": 0.5173686935240964,
+  "top_decile_user_share": 0.3547628012048193,
+  "product_popularity_gini": 0.5416537065837221,
+  "cold_products": 50,
+  "density_views": 0.036583333333333336,
+  "legacy_ctr": 0.16796267496111975,
+  "affinity_engagement_spearman": 0.2056403720163719,
+  "popularity_vs_appeal_spearman": 0.46438392602770184
+}

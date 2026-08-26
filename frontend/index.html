@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TESSCH — modular footwear</title>
+    <meta
+      name="description"
+      content="Mock storefront for the TESSCH behaviour-based recommendation engine."
+    />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="wrap masthead__inner">
+        <a class="logo" href="/">
+          <span class="logo__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          TESSCH
+        </a>
+        <span class="meta masthead__tag">modular footwear</span>
+        <span class="masthead__spacer"></span>
+        <span class="masthead__id">
+          <span class="meta">you are</span>
+          <code id="visitor-id">…</code>
+          <button class="btn-quiet" id="reset-visitor" type="button">
+            new visitor
+          </button>
+        </span>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <div>
+          <p class="meta" style="margin: 0 0 0.9rem">
+            behaviour-based recommendations
+          </p>
+          <h1 class="display hero__title">
+            We measure<br />what you <em>linger</em> on.
+          </h1>
+          <p class="hero__lede">
+            No ratings, no reviews, no sign-in. This store records how long each
+            product page holds your attention, and builds two things from that
+            single number: what to show you when you come back, and which products
+            attract the same kind of attention as each other.
+          </p>
+        </div>
+        <div class="readout" id="readout">
+          <div class="readout__row">
+            <span class="meta">catalogue</span><b id="stat-products">—</b>
+          </div>
+          <div class="readout__row">
+            <span class="meta">views recorded</span><b id="stat-events">—</b>
+          </div>
+          <div class="readout__row">
+            <span class="meta">from real browsing</span><b id="stat-live">—</b>
+          </div>
+          <div class="readout__row">
+            <span class="meta">products with neighbours</span
+            ><b id="stat-coverage">—</b>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <h2 class="section__title">Picked for you</h2>
+          <span class="section__spacer"></span>
+          <span class="strategy" id="picked-strategy">…</span>
+        </div>
+        <p class="section__why" id="picked-why"></p>
+        <div class="grid" id="picked"></div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <h2 class="section__title">The catalogue</h2>
+          <span class="section__spacer"></span>
+          <span class="meta" id="catalogue-count"></span>
+        </div>
+        <div class="grid" id="catalogue"></div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <p class="meta">tessch recommendation engine — mock storefront</p>
+      <p>
+        Open any product, stay a while, then come back here. "Picked for you" is
+        built from the seconds you spent, weighted toward recent views. Every list
+        on this site is labelled with the model that produced it, including when it
+        falls back to plain popularity.
+      </p>
+    </footer>
+
+    <script src="/static/js/tracker.js"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/render.js"></script>
+    <script src="/static/js/home.js"></script>
+  </body>
+</html>

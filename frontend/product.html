@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TESSCH</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="wrap masthead__inner">
+        <a class="logo" href="/">
+          <span class="logo__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          TESSCH
+        </a>
+        <span class="meta masthead__tag">modular footwear</span>
+        <span class="masthead__spacer"></span>
+        <span class="masthead__id">
+          <span class="meta">you are</span>
+          <code id="visitor-id">…</code>
+        </span>
+      </div>
+    </header>
+
+    <div class="wrap crumb"><a href="/">← all products</a></div>
+
+    <main class="wrap">
+      <article class="detail" id="detail">
+        <div class="detail__tile" id="detail-tile"></div>
+        <div>
+          <p class="meta detail__code" id="detail-code">…</p>
+          <h1 class="display detail__name" id="detail-name">Loading</h1>
+          <p class="detail__price num" id="detail-price"></p>
+          <p class="detail__desc" id="detail-desc"></p>
+          <table class="spec">
+            <caption class="visually-hidden">Product specification</caption>
+            <tbody id="detail-spec"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <section class="section">
+        <div class="section__head">
+          <h2 class="section__title">You might also like</h2>
+          <span class="section__spacer"></span>
+          <span class="strategy" id="similar-strategy">…</span>
+        </div>
+        <p class="section__why" id="similar-why"></p>
+        <div class="grid" id="similar"></div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <p class="meta">how this list was built</p>
+      <p>
+        Dwell time from every visitor is pooled into a matrix of people against
+        products, with each person's row scaled to unit length so that a single
+        heavy browser cannot dominate. Cosine similarity between two product
+        columns then measures whether the same people gave both their attention —
+        regardless of how popular either one is. The number on each tile is that
+        similarity, from 0 to 1.
+      </p>
+    </footer>
+
+    <script src="/static/js/tracker.js"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/render.js"></script>
+    <script src="/static/js/product.js"></script>
+  </body>
+</html>

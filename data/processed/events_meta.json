@@ -1,0 +1,12 @@
+{
+  "seed": 20260825,
+  "n_users": 80,
+  "n_products": 300,
+  "history_days": 30,
+  "start_date": "2026-07-26",
+  "end_date": "2026-08-25",
+  "n_events": 11285,
+  "n_sessions": 328,
+  "n_orders": 27,
+  "sale_days": []
+}

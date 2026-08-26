@@ -1,0 +1,40 @@
+# TESSCH Recommendation Engine — dependencies
+#
+# Install:  pip install -r requirements.txt
+#
+# Deliberately small. The serving path (SQLite + pandas + scikit-learn) has no
+# database server, no message queue and no model registry, because a two-week
+# project that needs those to run is a project nobody can clone and start.
+
+# ── Core data stack ───────────────────────────────────────────
+numpy>=1.24
+pandas>=2.0
+
+# ── Machine learning ──────────────────────────────────────────
+# cosine_similarity for the item-item model. scikit-learn is the only ML
+# dependency; there is no gradient-boosted ranker in this version of the system.
+scikit-learn>=1.3
+
+# ── Database ──────────────────────────────────────────────────
+# SQLAlchemy owns the schema (backend/database/models.py) and the bulk
+# simulation load. The request path uses stdlib sqlite3 directly — see
+# backend/database/queries.py for why.
+SQLAlchemy>=2.0
+
+# ── Backend API ───────────────────────────────────────────────
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.6
+
+# ── Config / reporting ────────────────────────────────────────
+python-dotenv>=1.0
+tabulate>=0.9
+
+# ── Optional: parquet export of the simulated dataset ─────────
+# Only needed for `scripts/generate_events.py --parquet`. The SQLite database
+# is the primary store and does not require this.
+pyarrow>=14.0
+
+# ── Tests ─────────────────────────────────────────────────────
+pytest>=7.4
+httpx>=0.26          # FastAPI TestClient transport

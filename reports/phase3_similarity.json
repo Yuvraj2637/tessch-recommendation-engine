@@ -1,0 +1,425 @@
+{
+  "generated_at": "2026-08-26T02:07:27+00:00",
+  "sklearn_installed": true,
+  "backend": "sklearn",
+  "settings": {
+    "normalisation": "l2",
+    "top_k": 6,
+    "min_user_products": 2
+  },
+  "data": {
+    "events_used": 1286,
+    "catalogue_size": 300,
+    "n_categories": 8,
+    "provenance": {
+      "live": {
+        "views": 0,
+        "users": 0,
+        "products": 0
+      },
+      "simulated": {
+        "views": 1286,
+        "users": 70,
+        "products": 250
+      },
+      "total_views": 1286,
+      "live_share": 0.0
+    }
+  },
+  "matrix": {
+    "n_users": 69,
+    "n_products": 300,
+    "observed_cells": 877,
+    "density": 0.042367,
+    "sparsity": 0.957633,
+    "normalisation": "l2",
+    "cold_products": 50
+  },
+  "coverage": {
+    "n_products": 300,
+    "products_with_neighbours": 250,
+    "cold_products": 50,
+    "coverage": 0.8333333333333334
+  },
+  "coherence": [
+    {
+      "attribute": "category",
+      "evaluated_products": 250,
+      "pairs": 1493,
+      "top1_match_rate": 0.764,
+      "topk_match_rate": 0.7260549229738781,
+      "random_baseline": 0.26085140562249,
+      "lift": 2.783404295795289
+    },
+    {
+      "attribute": "style",
+      "evaluated_products": 250,
+      "pairs": 1493,
+      "top1_match_rate": 0.428,
+      "topk_match_rate": 0.4407233757535164,
+      "random_baseline": 0.18666666666666668,
+      "lift": 2.3610180843938378
+    },
+    {
+      "attribute": "color_family",
+      "evaluated_products": 250,
+      "pairs": 1493,
+      "top1_match_rate": 0.212,
+      "topk_match_rate": 0.24983255190890824,
+      "random_baseline": 0.20028915662650604,
+      "lift": 1.2473593484383652
+    }
+  ],
+  "similarity_distribution": {
+    "pairs": 89700,
+    "mean": 0.031091671879270377,
+    "median": 0.0,
+    "p90": 0.07817162913762661,
+    "p99": 0.6171237672199521,
+    "max": 1.0,
+    "zero_share": 0.8533110367892976,
+    "mean_nonzero": 0.21195644988376294
+  },
+  "popularity_concentration": {
+    "slots": 1493,
+    "distinct_recommended": 248,
+    "catalogue_size": 300,
+    "recommendable_share": 0.8266666666666667,
+    "top10_slot_share": 0.07300736771600803
+  },
+  "activity_concentration": {
+    "users": 70,
+    "top_user": "U00079",
+    "top_user_seconds": 7161.1,
+    "top_user_share": 0.0886,
+    "median_user_seconds": 693.4,
+    "top_to_median_ratio": 10.33,
+    "gini": 0.5135
+  },
+  "stability": {
+    "removed_user": "U00079",
+    "removed_user_share": 0.0886,
+    "normalisation": "l2",
+    "compared_products": 244,
+    "went_cold": 6,
+    "topk_jaccard": 0.9404,
+    "topk_slots_changed": 0.0596,
+    "top1_unchanged": 0.9221
+  },
+  "normalisation_comparison": [
+    {
+      "normalisation": "none",
+      "category_topk_match": 0.7702612190221031,
+      "category_lift": 2.9528735610374377,
+      "topk_jaccard_stability": 0.8194,
+      "top1_unchanged": 0.8484,
+      "top10_slot_share": 0.10850636302746149
+    },
+    {
+      "normalisation": "l2",
+      "category_topk_match": 0.7260549229738781,
+      "category_lift": 2.783404295795289,
+      "topk_jaccard_stability": 0.9404,
+      "top1_unchanged": 0.9221,
+      "top10_slot_share": 0.07300736771600803
+    },
+    {
+      "normalisation": "user_share",
+      "category_topk_match": 0.6932350971198928,
+      "category_lift": 2.6575862049336942,
+      "topk_jaccard_stability": 0.9756,
+      "top1_unchanged": 0.9631,
+      "top10_slot_share": 0.07367716008037509
+    }
+  ],
+  "examples": [
+    {
+      "source_product_id": "T014",
+      "source_name": "Tangent Rasputeen",
+      "source_category": "Sneaker",
+      "rank": 1,
+      "product_id": "T001",
+      "product_name": "Arc Tangelo",
+      "category": "Sneaker",
+      "style": "Casual",
+      "same_category": true,
+      "score": 0.5419
+    },
+    {
+      "source_product_id": "T014",
+      "source_name": "Tangent Rasputeen",
+      "source_category": "Sneaker",
+      "rank": 2,
+      "product_id": "T293",
+      "product_name": "Summit Black",
+      "category": "Sneaker",
+      "style": "Smart Casual",
+      "same_category": true,
+      "score": 0.5419
+    },
+    {
+      "source_product_id": "T014",
+      "source_name": "Tangent Rasputeen",
+      "source_category": "Sneaker",
+      "rank": 3,
+      "product_id": "T207",
+      "product_name": "Rift White",
+      "category": "Sneaker",
+      "style": "Casual",
+      "same_category": true,
+      "score": 0.5419
+    },
+    {
+      "source_product_id": "T014",
+      "source_name": "Tangent Rasputeen",
+      "source_category": "Sneaker",
+      "rank": 4,
+      "product_id": "T234",
+      "product_name": "Beacon Navy",
+      "category": "Sneaker",
+      "style": "Smart Casual",
+      "same_category": true,
+      "score": 0.5419
+    },
+    {
+      "source_product_id": "T015",
+      "source_name": "Tangent Biskoff",
+      "source_category": "Sneaker",
+      "rank": 1,
+      "product_id": "T087",
+      "product_name": "Sable White",
+      "category": "Sandal",
+      "style": "Casual",
+      "same_category": false,
+      "score": 0.7015
+    },
+    {
+      "source_product_id": "T015",
+      "source_name": "Tangent Biskoff",
+      "source_category": "Sneaker",
+      "rank": 2,
+      "product_id": "T238",
+      "product_name": "Plume Charcoal",
+      "category": "Sneaker",
+      "style": "Casual",
+      "same_category": true,
+      "score": 0.3578
+    },
+    {
+      "source_product_id": "T015",
+      "source_name": "Tangent Biskoff",
+      "source_category": "Sneaker",
+      "rank": 3,
+      "product_id": "T078",
+      "product_name": "Gale Rust",
+      "category": "Sneaker",
+      "style": "Streetwear",
+      "same_category": true,
+      "score": 0.3463
+    },
+    {
+      "source_product_id": "T015",
+      "source_name": "Tangent Biskoff",
+      "source_category": "Sneaker",
+      "rank": 4,
+      "product_id": "T249",
+      "product_name": "Basalt Beige",
+      "category": "Sneaker",
+      "style": "Casual",
+      "same_category": true,
+      "score": 0.2754
+    },
+    {
+      "source_product_id": "T002",
+      "source_name": "Arc Sakura",
+      "source_category": "Sneaker",
+      "rank": 1,
+      "product_id": "T250",
+      "product_name": "Meridian Teal Sneaker",
+      "category": "Sneaker",
+      "style": "Casual",
+      "same_category": true,
+      "score": 0.7157
+    },
+    {
+      "source_product_id": "T002",
+      "source_name": "Arc Sakura",
+      "source_category": "Sneaker",
+      "rank": 2,
+      "product_id": "T196",
+      "product_name": "Trellis Sand",
+      "category": "Sneaker",
+      "style": "Smart Casual",
+      "same_category": true,
+      "score": 0.6331
+    },
+    {
+      "source_product_id": "T002",
+      "source_name": "Arc Sakura",
+      "source_category": "Sneaker",
+      "rank": 3,
+      "product_id": "T165",
+      "product_name": "Alder Off-White",
+      "category": "Sneaker",
+      "style": "Casual",
+      "same_category": true,
+      "score": 0.4776
+    },
+    {
+      "source_product_id": "T002",
+      "source_name": "Arc Sakura",
+      "source_category": "Sneaker",
+      "rank": 4,
+      "product_id": "T159",
+      "product_name": "Slate Cream Sneaker",
+      "category": "Sneaker",
+      "style": "Streetwear",
+      "same_category": true,
+      "score": 0.4529
+    },
+    {
+      "source_product_id": "T007",
+      "source_name": "Carve Brenjam",
+      "source_category": "Sneaker",
+      "rank": 1,
+      "product_id": "T212",
+      "product_name": "Delta White Sneaker",
+      "category": "Sneaker",
+      "style": "Smart Casual",
+      "same_category": true,
+      "score": 0.845
+    },
+    {
+      "source_product_id": "T007",
+      "source_name": "Carve Brenjam",
+      "source_category": "Sneaker",
+      "rank": 2,
+      "product_id": "T001",
+      "product_name": "Arc Tangelo",
+      "category": "Sneaker",
+      "style": "Casual",
+      "same_category": true,
+      "score": 0.6234
+    },
+    {
+      "source_product_id": "T007",
+      "source_name": "Carve Brenjam",
+      "source_category": "Sneaker",
+      "rank": 3,
+      "product_id": "T207",
+      "product_name": "Rift White",
+      "category": "Sneaker",
+      "style": "Casual",
+      "same_category": true,
+      "score": 0.6234
+    },
+    {
+      "source_product_id": "T007",
+      "source_name": "Carve Brenjam",
+      "source_category": "Sneaker",
+      "rank": 4,
+      "product_id": "T234",
+      "product_name": "Beacon Navy",
+      "category": "Sneaker",
+      "style": "Smart Casual",
+      "same_category": true,
+      "score": 0.6234
+    },
+    {
+      "source_product_id": "T009",
+      "source_name": "Carve Wasabi",
+      "source_category": "Sneaker",
+      "rank": 1,
+      "product_id": "T127",
+      "product_name": "Vantage Grey",
+      "category": "Sneaker",
+      "style": "Streetwear",
+      "same_category": true,
+      "score": 0.7498
+    },
+    {
+      "source_product_id": "T009",
+      "source_name": "Carve Wasabi",
+      "source_category": "Sneaker",
+      "rank": 2,
+      "product_id": "T260",
+      "product_name": "Crag Sky Blue",
+      "category": "Sneaker",
+      "style": "Smart Casual",
+      "same_category": true,
+      "score": 0.6754
+    },
+    {
+      "source_product_id": "T009",
+      "source_name": "Carve Wasabi",
+      "source_category": "Sneaker",
+      "rank": 3,
+      "product_id": "T027",
+      "product_name": "Warden Sand",
+      "category": "Sneaker",
+      "style": "Casual",
+      "same_category": true,
+      "score": 0.6298
+    },
+    {
+      "source_product_id": "T009",
+      "source_name": "Carve Wasabi",
+      "source_category": "Sneaker",
+      "rank": 4,
+      "product_id": "T003",
+      "product_name": "Arc Omnitrix",
+      "category": "Sneaker",
+      "style": "Streetwear",
+      "same_category": true,
+      "score": 0.6189
+    },
+    {
+      "source_product_id": "T010",
+      "source_name": "Carve Volcano",
+      "source_category": "Sneaker",
+      "rank": 1,
+      "product_id": "T300",
+      "product_name": "Vessel Black",
+      "category": "Boot",
+      "style": "Heritage",
+      "same_category": false,
+      "score": 0.9757
+    },
+    {
+      "source_product_id": "T010",
+      "source_name": "Carve Volcano",
+      "source_category": "Sneaker",
+      "rank": 2,
+      "product_id": "T147",
+      "product_name": "Stark Black",
+      "category": "Boot",
+      "style": "Heritage",
+      "same_category": false,
+      "score": 0.9166
+    },
+    {
+      "source_product_id": "T010",
+      "source_name": "Carve Volcano",
+      "source_category": "Sneaker",
+      "rank": 3,
+      "product_id": "T107",
+      "product_name": "Nimbus Rust",
+      "category": "Sneaker",
+      "style": "Casual",
+      "same_category": true,
+      "score": 0.8691
+    },
+    {
+      "source_product_id": "T010",
+      "source_name": "Carve Volcano",
+      "source_category": "Sneaker",
+      "rank": 4,
+      "product_id": "T181",
+      "product_name": "Flare Beige",
+      "category": "Loafer",
+      "style": "Smart Casual",
+      "same_category": false,
+      "score": 0.8421
+    }
+  ]
+}
