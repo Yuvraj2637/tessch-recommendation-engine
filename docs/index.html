@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Try the TESSCH dwell-time recommendation engine in an interactive footwear storefront.">
+  <meta name="theme-color" content="#f5f3ef">
+  <title>TESSCH · Recommendation prototype</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top">TESSCH<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#recommendations">For you</a>
+        <a href="#catalogue">Catalogue</a>
+      </nav>
+      <button class="quiet-action" type="button" id="reset" disabled>Reset activity</button>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Recommendation prototype</p>
+        <h1 id="hero-title">Find your<br>next <em>pair.</em></h1>
+        <p>Explore modular footwear and watch the recommendations change based on the time you spend with each product.</p>
+        <div class="hero-actions">
+          <a class="action primary" href="#catalogue">Explore catalogue <span aria-hidden="true">↘</span></a>
+          <button class="action secondary" type="button" id="sample" disabled>Try sample activity</button>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <img src="./hero.webp" alt="Illustrative black modular sneaker with orange accents">
+      </figure>
+    </section>
+
+    <section id="recommendations" class="section" aria-labelledby="picks-title">
+      <div class="section-heading">
+        <h2 id="picks-title">Picked for you</h2>
+        <span id="pick-strategy" class="model-label" hidden></span>
+      </div>
+      <p id="pick-reason" class="intro" aria-live="polite">Loading the recommendation model…</p>
+      <div id="picks" class="product-grid"></div>
+    </section>
+
+    <section id="catalogue" class="section" aria-labelledby="catalogue-title">
+      <div class="section-heading">
+        <h2 id="catalogue-title">Explore the catalogue</h2>
+        <div class="filters">
+          <label><span class="sr-only">Search products</span><input type="search" id="search" placeholder="Search products" disabled></label>
+          <label><span class="sr-only">Filter category</span><select id="category" disabled><option value="">All categories</option></select></label>
+        </div>
+      </div>
+      <p id="catalogue-count" class="intro" aria-live="polite"></p>
+      <div id="products" class="product-grid"></div>
+      <button class="action outlined more" type="button" id="more" hidden>Show more products</button>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <p>Personal activity stays in this browser. Related products use simulated shopper data.</p>
+    <a href="https://github.com/Yuvraj2637/tessch-recommendation-engine">Project on GitHub ↗</a>
+    <a href="https://tessch.in/">TESSCH product imagery ↗</a>
+  </footer>
+
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="detail-inner">
+      <form method="dialog"><button id="close-detail" type="submit" class="close-action" aria-label="Close product" autofocus>×</button></form>
+      <div class="detail-product">
+        <div id="detail-art"></div>
+        <div class="detail-copy">
+          <p id="detail-category" class="eyebrow"></p>
+          <h2 id="detail-title"></h2>
+          <p id="detail-price" class="detail-price"></p>
+          <p id="detail-description"></p>
+          <p id="detail-specs" class="intro"></p>
+          <p id="dwell" class="dwell">Active viewing time <output id="dwell-time">0.0 s</output></p>
+        </div>
+      </div>
+      <section aria-labelledby="related-title" class="related">
+        <div class="section-heading">
+          <h3 id="related-title">You might also like</h3>
+          <span id="related-strategy" class="model-label"></span>
+        </div>
+        <p id="related-reason" class="intro"></p>
+        <div id="related" class="product-grid"></div>
+      </section>
+    </div>
+  </dialog>
+</body>
+</html>
