@@ -14,6 +14,16 @@ Rather than relying on intrusive rating prompts or forced account sign-ups, this
 
 ---
 
+## Live prototype
+
+[Open the interactive TESSCH demo](https://yuvraj2637.github.io/tessch-recommendation-engine/).
+
+Browse the 25 curated products, open a product for at least one second, then close it to see **Picked for you** update. **Try sample activity** loads an example session and **Reset activity** clears the browser's saved views. Product details show related items using cosine similarity on 1,286 synthetic views from 70 simulated shoppers, with a popularity fallback for products without enough data.
+
+The GitHub Pages demo runs in the browser, and personal activity is stored locally. Serve it locally with `python -m http.server 8000 --directory docs`. To refresh its synthetic data after running the project's event generator, use `python -m scripts.export_pages_demo`.
+
+---
+
 ## Architecture Overview
 
 ```mermaid
